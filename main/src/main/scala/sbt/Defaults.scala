@@ -2009,7 +2009,8 @@ object Classpaths {
       .withExtra(pomExtra.value)
       .withProcess(pomPostProcess.value)
       .withFilterRepositories(pomIncludeRepository.value)
-      .withAllRepositories(pomAllRepositories.value),
+      .withAllRepositories(pomAllRepositories.value)
+      .withConfigurations(Configurations.defaultMavenConfigurations),
     makeIvyXmlConfiguration := {
       makeIvyXmlConfig(
         publishMavenStyle.value,
